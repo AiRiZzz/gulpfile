@@ -38,7 +38,7 @@ gulp build
 ```
 ```
 gulpfile
-└─── src
+└─── build
     │   index.html
     │   page.html
     ├─── css
