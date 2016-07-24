@@ -1,43 +1,82 @@
-# gulpfile
+# Сборка проекта
 
-## init:html
-Создание директорий и файлов
-* src
-* src/html
-* src/html/index.html
-* src/less/
-* src/less/main.less
-* src/less/devl
-* src/less/devl/var.less
-* src/js
-* src/js/main.js
-* src/js/devl
-* src/img
-* src/fnt
+### Структура файлов
+```
+gulpfile
+│   README.md
+│   gulpfile.js
+│   package.json
+└─── src
+    ├─── html
+    │   │   index.html
+    │   └─── tpl
+    ├─── scss
+    │   │   main.scss
+    │   │   core.scss
+    │   └─── core
+    ├─── js
+    │   │   main.js
+    │   │   plugin.js
+    │   └─── plugin
+    ├─── img
+    └─── fnt
+```
 
-## init:jade
-Создание директорий и файлов
-* src
-* src/jade
-* src/jade/index.jade
-* src/less/
-* src/less/main.less
-* src/less/devl
-* src/less/devl/var.less
-* src/js
-* src/js/main.js
-* src/js/devl
-* src/img
-* src/fnt
+### Установка и инициализация
+```
+npm up
 
-## start:html
-Билд html, сервер, watch
+gulp init
+```
 
-## start:jade
-Билд jade, сервер, watch
+### Билд
 
-## build:html
-Билд html
+ - Пересоздает каталог `build`
 
-## build:jade
-Билд jade
+```
+gulp build
+```
+```
+gulpfile
+└─── src
+    │   index.html
+    │   page.html
+    ├─── css
+    │   │   style.css (main.scss)
+    │   │   min.css (core.scss)
+    ├─── js
+    │   │   script.js (main.js)
+    │   │   min.js (plugin.js)
+    ├─── img
+    └─── fnt
+```
+### Первый старт
+
+ - Пересоздает каталог `build`
+ - Запсукает сервер
+ - Подключает отслеживание изменений в файлах
+
+```
+gulp start
+```
+
+### Старт
+
+ - Запсукает сервер
+ - Подключает отслеживание изменений в файлах
+
+```
+gulp
+```
+
+### Удаление
+
+ - Удаляет каталог `build`
+
+```
+gulp clear
+```
+или
+```
+gulp clean
+```
